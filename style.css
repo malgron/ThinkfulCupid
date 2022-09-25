@@ -1,0 +1,162 @@
+/* -------  General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #6b1a22;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 15px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #a35766;
+  color: #ecdbc9;
+}
+
+main img {
+  width: 100%;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #83092e;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 72px;
+  color: #ecdbc9;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  padding-right: 18px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #ecdbc9;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+  user-select: none;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* -------  Join Form ------- */
+form {
+  border: 2px solid #6b1a22;
+  padding: 10px;
+}
+
+form ul {
+  padding: 0px;
+}
+
+form li {
+  display: flex;
+}
+
+form label {
+  font-weight: bold;
+  flex: 1;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #83092e;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #83092e;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+/*Breakpoint for navbar at 480*/
+@media all and (min-width: 480px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 48px;
+    justify-content: flex-start;
+  }
+}
+/*Breakpoint for desktop at 800 to ensure that tablet view maintains the vertical flow*/
+@media all and (min-width: 800px) {
+  .group {
+    flex-direction: row;
+  }
+}
