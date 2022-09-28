@@ -64,13 +64,14 @@ header h1 {
 header nav {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 header nav ul {
   display: flex;
   padding-left: 0;
   list-style-type: none;
-}
+  }
 
 header nav ul li a {
   color: #ecdbc9;
@@ -94,6 +95,7 @@ header nav ul li:last-child a {
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
+  width: 100%;
 }
 
 form ul {
@@ -161,6 +163,70 @@ footer p {
   flex-direction: column;
 }
 
+#group .item { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Mobile View */
+@media all and (min-width: 480px) {
+  header {
+    background-color: #83092e;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  header h1 {
+    font-family: "Tangerine", cursive;
+    font-size: 48px;
+    color: #ecdbc9;
+    justify-content: center;
+    display: flex;
+   /* Sets 14 pixels of margin above and below the `h1` and sets 
+       0 pixels of margin to the left and right. */
+   margin: 14px 0;
+   /* Removes or sets 0 pixels of padding above the `h1`. */
+   padding-top: 0;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .aboutLeft {
+    width: 50%;
+  }
+
+  .aboutRight {
+    width: 50%;
+    align-items: center;
+  }
+  
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .item-double {
+    flex: 2;
+    margin: 10px;
+  }
+  
+  #join .item { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+}
+
 /* Groups & Items  (Desktop) */
 @media all and (min-width: 800px) {
   header {
@@ -188,10 +254,43 @@ footer p {
     margin-bottom: 10px;
   }
 
+  .downloadGroup {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .downloadGroup :first-child{
+    display: flex;
+    flex-direction: column;;
+    align-content: center;
+  }
+
   .item {
     flex: 1;
     margin: 10px;
     justify-content: center;
   }
+
+  #about .item { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .aboutRight {
+    width: 50%;
+    align-items: center;
+  }
+
+  .item-double {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    margin: 10px;
+  }
+
+ 
 }
 
